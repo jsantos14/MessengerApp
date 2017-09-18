@@ -8,6 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="conversationBlock" Margin="10,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="306"/>
+        <Button x:Name="sendButton" Content="Button" HorizontalAlignment="Left" Margin="1205,542,0,0" VerticalAlignment="Top" Click="button_Click" Width="65"/>
+        <TextBox x:Name="textBox" Margin="10,478,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" AllowDrop="True"/>
+            
 
     </Grid>
 </Page>

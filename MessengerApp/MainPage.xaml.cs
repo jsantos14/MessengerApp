@@ -26,5 +26,12 @@ namespace MessengerApp
         {
             this.InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            conversationBlock.Text = textBox.Text; 
+        }
+
+        
     }
 }
