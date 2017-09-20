@@ -7,11 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="conversationBlock" Margin="10,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="306"/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
+        <TextBlock x:Name="conversationBlock" Margin="10,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="306" SelectionHighlightColor="White"/>
         <Button x:Name="sendButton" Content="Button" HorizontalAlignment="Left" Margin="1205,542,0,0" VerticalAlignment="Top" Click="button_Click" Width="65"/>
-        <TextBox x:Name="textBox" Margin="10,478,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" AllowDrop="True"/>
-            
+        <TextBox x:Name="textBox" Margin="10,478,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" AllowDrop="True" PlaceholderText="Click here to get the convo going!" ToolTipService.ToolTip="Click here to send a message!"/>
 
     </Grid>
 </Page>

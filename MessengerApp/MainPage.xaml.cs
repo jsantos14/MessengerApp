@@ -29,7 +29,8 @@ namespace MessengerApp
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            conversationBlock.Text = textBox.Text; 
+            String prevText = conversationBlock.Text;
+            conversationBlock.Text = prevText + "\n" + textBox.Text; 
         }
 
         
