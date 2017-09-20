@@ -8,6 +8,17 @@ namespace MessengerApp
 {
     class Socket
     {
+        public void Initialize()
+        {
+            
+        }
+
+        public void Send()
+        {
+            // TO-DO: TCP socket code here ...
+
+            // ... Project Complete
+        }
 
     }
 }
