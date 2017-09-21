@@ -7,10 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
-        <TextBlock x:Name="conversationBlock" Margin="10,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="306" SelectionHighlightColor="White"/>
-        <Button x:Name="sendButton" Content="Button" HorizontalAlignment="Left" Margin="1205,542,0,0" VerticalAlignment="Top" Click="button_Click" Width="65"/>
+    <Grid x:Name="grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
+        <TextBox x:Name="conversationBlock" Margin="10,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="428" SelectionHighlightColor="Black" RequestedTheme="Dark" IsReadOnly="True" IsTabStop="False">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <Button x:Name="sendButton" Content="Send" HorizontalAlignment="Right" Margin="0,542,10,0" VerticalAlignment="Top" Click="button_Click" Width="65" TabIndex="1"/>
         <TextBox x:Name="textBox" Margin="10,478,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" AllowDrop="True" PlaceholderText="Click here to get the convo going!" ToolTipService.ToolTip="Click here to send a message!"/>
+        <ToggleSwitch x:Name="toggleSwitch" Header="LightTheme" HorizontalAlignment="Left" Margin="10,643,0,0" VerticalAlignment="Top" Toggled="toggleSwitch_Toggled" IsTabStop="False"/>
 
     </Grid>
 </Page>
