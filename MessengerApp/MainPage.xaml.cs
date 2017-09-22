@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,6 +23,8 @@ namespace MessengerApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private Boolean isDarkTheme = true; 
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -30,12 +33,21 @@ namespace MessengerApp
         private void button_Click(object sender, RoutedEventArgs e)
         {
             String prevText = conversationBlock.Text;
-            conversationBlock.Text = prevText + "\n" + textBox.Text;
-
-            Socket socket = new Socket();
-            socket.Send(conversationBlock.Text);
+            conversationBlock.Text = prevText + "\n" + "You: " + textBox.Text; 
         }
 
-        
+        private void toggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (isDarkTheme)
+            {
+                grid.RequestedTheme = ElementTheme.Light; 
+                isDarkTheme = false; 
+            }
+            else
+            {
+                grid.RequestedTheme = ElementTheme.Dark;
+                isDarkTheme = true; 
+            }
+        }
     }
 }
