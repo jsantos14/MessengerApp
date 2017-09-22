@@ -30,7 +30,10 @@ namespace MessengerApp
         private void button_Click(object sender, RoutedEventArgs e)
         {
             String prevText = conversationBlock.Text;
-            conversationBlock.Text = prevText + "\n" + textBox.Text; 
+            conversationBlock.Text = prevText + "\n" + textBox.Text;
+
+            Socket socket = new Socket();
+            socket.Send(conversationBlock.Text);
         }
 
         
