@@ -33,7 +33,10 @@ namespace MessengerApp
         private void button_Click(object sender, RoutedEventArgs e)
         {
             String prevText = conversationBlock.Text;
-            conversationBlock.Text = prevText + "\n" + "You: " + textBox.Text; 
+            conversationBlock.Text = prevText + "\n" + "You: " + textBox.Text;
+
+            Socket socket = new Socket();
+            socket.SendAsync(textBox.Text);
         }
 
         private void toggleSwitch_Toggled(object sender, RoutedEventArgs e)
